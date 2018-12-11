@@ -8,5 +8,6 @@ public class HelloWorldController {
     @RequestMapping("/hello") //get method is default
     public String helloworld(){
         return "Hello world";
+        //herokudeployment requires the /hello
     }
 }
