@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Everything is Capitalized!</title>
+    <div th:replace="~{common :: head}"></div>
+</head>
+<body>
+<p th:text=" ${wordsToCapitalize}" />
+</body>
+</html>
