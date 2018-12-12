@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Album</title>
+    <div th:replace="~{common :: head}"></div>
+</head>
+
+<body>
+<h1>Albums!</h1>
+<ul>
+    <li th:each="al : ${albums}">
+        <span th:text="${al.artist}"></span> that has an album named<span th:text="${al.title}"></span> which contains
+        <span th:text="${al.songCount}"></span> songs. The duration of the song is <span th:text="${al.length}"></span>
+        seconds long and you can view the album cover at <span th:text="${al.length}"></span>
+    </li>
+</ul>
+<h2>Add an Album!</h2>
+<form action="/albums" method="POST">
+    <input name="artist" />
+    <input name="title" />
+    <input name="songCount" />
+    <input name="length" />
+    <input name="length" />
+    <input type="submit" />
+</form>
+
+</body>
+
+</html>
