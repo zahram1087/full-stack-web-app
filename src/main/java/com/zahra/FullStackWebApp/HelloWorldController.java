@@ -13,6 +13,8 @@ public class HelloWorldController  {
 
     @RequestMapping("/")
     public RedirectView homeRedirect() {
+
+
         return new RedirectView("/albums");
     }
 

@@ -1,11 +1,9 @@
 package com.zahra.FullStackWebApp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+//@Table(name ="album")
 public class Album {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

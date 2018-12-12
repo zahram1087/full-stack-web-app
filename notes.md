@@ -22,3 +22,5 @@ Different Possible RequestMapping
 //       return wordsToCapitalize.toUpperCase();
 //        //leaf passes the string all the way to the front end
 //    }
+
+remove this to save to database: spring.jpa.hibernate.ddl-auto = create

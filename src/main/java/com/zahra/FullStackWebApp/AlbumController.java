@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.List;
 
 
 @Controller
@@ -20,12 +21,14 @@ public class AlbumController {
         //grab all the albums from the database
 
         //display them on a page
-        m.addAttribute("albums ", albumRepo.findAll());
+//        List<Album> guess = (List<Album>) albumRepo.findAll();
+//        m.addAttribute("albums", guess);
+        m.addAttribute("albums", albumRepo.findAll());
         return "albumIndex";
     }
 
     @RequestMapping(value="/albums",method=RequestMethod.POST)
-    public RedirectView create(@RequestParam String title,
+    public RedirectView create (@RequestParam String title,
                                @RequestParam String artist,
                                @RequestParam int songCount,
                                @RequestParam int length,
