@@ -1,6 +1,6 @@
 
 
-
+Different Possible RequestMapping
 
 //    @RequestMapping("/capitalize")
 //    public String capitalizeWords(@RequestParam (name = "name",required =false)String name){
