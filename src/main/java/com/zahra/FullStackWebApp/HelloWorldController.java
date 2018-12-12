@@ -13,9 +13,9 @@ public class HelloWorldController  {
     }
 
     @RequestMapping(value = "/capitalize/{wordsToCapitalize}", method = RequestMethod.GET)
-    public String capitalizeWords(@PathVariable()String wordsToCapitalize, Model model){
+    public String capitalizeWords(@PathVariable()String wordsToCapitalize){
 
-        model.addAttribute("wordsToCapitalize",wordsToCapitalize);
+//        model.addAttribute("wordsToCapitalize",wordsToCapitalize);
         return wordsToCapitalize(wordsToCapitalize);
         //leaf passes the string all the way to the front end
     }

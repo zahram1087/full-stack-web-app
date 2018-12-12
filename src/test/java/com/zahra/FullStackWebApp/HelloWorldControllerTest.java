@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class HelloWorldControllerTest {
 
     @Test
-    public void testwordsToCapitalizeShort() {
+    public void testwordsToCapitalizeShortWord() {
 
         String word = "hello";
         String expected = "HELLO";
@@ -16,7 +16,7 @@ public class HelloWorldControllerTest {
     }
 
     @Test
-    public void testwordsToCapitalizeMedium() {
+    public void testwordsToCapitalizeMediumWord() {
 
         String word = "helloThere";
         String  expected= "HELLOTHERE";
@@ -25,7 +25,7 @@ public class HelloWorldControllerTest {
     }
 
     @Test
-    public void testwordsToCapitalizeLarge() {
+    public void testwordsToCapitalizeLargeWord() {
 
         String word = "helloTherewhereHow";
         String expected= "HELLOTHEREWHEREHOW";
