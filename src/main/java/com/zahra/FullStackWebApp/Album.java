@@ -1,9 +1,13 @@
 package com.zahra.FullStackWebApp;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.util.List;
 
 @Entity
-//@Table(name ="album")
 public class Album {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -13,6 +17,9 @@ public class Album {
     public int songCount; //number of songs in album
     public int length; //in seconds of song?
     public String imageUrl;
+
+    @OneToMany(mappedBy="album")
+    public List<Song> song;
 
     public Album() {}
 

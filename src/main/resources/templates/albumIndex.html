@@ -9,16 +9,22 @@
 
 <body>
 <h1>Welcome</h1>
-<table>
-    <tr><h2>Albums</h2>
-    <td th:each="al : ${albums}">
+<ul>
+    <h2>Albums</h2>
+    <li th:each="al : ${albums}">
         <span th:text="${al.artist}"></span> that has an album named<span th:text="${al.title}"></span> which contains
         <span th:text="${al.songCount}"></span> songs. The duration of the song is <span th:text="${al.length}"></span>
         seconds long and you can view the album cover  <a th:href="${al.imageUrl}"> here</a>
 
-    </td>
-    </tr>
-</table>
+        <form method="POST" th:action="${'/albums/'+ al.id +'/songs'}">
+            <label>Name</label><input name="title"/>
+            <label>length</label><input name="length"/>
+            <label>Track Number</label><input name="trackNumber"/>
+            <input type="submit"/>
+        </form>
+
+    </li>
+</ul>
 <h2>Add an Album!</h2>
 <form action="/albums" method="POST">
     <label>Artist</label><input name="artist"/>
