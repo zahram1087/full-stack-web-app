@@ -48,7 +48,7 @@ public class AlbumController {
                                 @RequestParam int length,
                                 @RequestParam int trackNumber){
         Song newHit = new Song(title,length,trackNumber);
-        newHit.album = (List<Album>) albumRepo.findById(albumId).get();
+        newHit.album = albumRepo.findById(albumId).get();
         songRepo.save(newHit);
         return new RedirectView("/albums");
 
