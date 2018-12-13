@@ -16,7 +16,7 @@
         <span th:text="${al.songCount}"></span> songs. The duration of the song is <span th:text="${al.length}"></span>
         seconds long and you can view the album cover  <a th:href="${al.imageUrl}"> here</a>
 
-        <form method="POST" th:action="${'/albums/'+ album.id +'/songs'}">
+        <form method="POST" th:action="${'/albums/'+ al.id +'/songs'}">
             <label>Name</label><input name="title"/>
             <label>length</label><input name="length"/>
             <label>Track Number</label><input name="trackNumber"/>

@@ -12,10 +12,10 @@ public class Song {
     public int length;
     public int trackNumber;
 
-    @OneToMany
-    public List<Album> album; //and the album on which that song appears
+    @ManyToOne
+    public Album album; //and the album on which that song appears
 
-    public Song(){}
+    public  Song(){}
 
     public Song(String title, int length, int trackNumber){
         this.title=title;

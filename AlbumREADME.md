@@ -8,3 +8,8 @@ I approached this lab reviewing how to do a controller.I also reviewed thymleaf 
 2. A user should be able to add albums to the site.
 3. RequestMapping to render a DB
 "http://localhost:8080/albums"
+
+##Runing App:
+
+1. Go to localhost8080/albums
+2.gradle run

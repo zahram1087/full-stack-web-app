@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -17,8 +18,8 @@ public class Album {
     public int length; //in seconds of song?
     public String imageUrl;
 
-    @ManyToOne
-    public Song song;
+    @OneToMany(mappedBy="album")
+    public List<Song> song;
 
     public Album() {}
 

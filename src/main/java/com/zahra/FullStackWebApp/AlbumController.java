@@ -42,13 +42,13 @@ public class AlbumController {
         return new  RedirectView("/albums");
     }
 
-    @RequestMapping(value="/albums/{albumId/songs}", method=RequestMethod.POST)
+    @RequestMapping(value="/albums/{albumId}/songs", method=RequestMethod.POST)
     public RedirectView addSong(@PathVariable long albumId,
                                 @RequestParam String title,
                                 @RequestParam int length,
                                 @RequestParam int trackNumber){
         Song newHit = new Song(title,length,trackNumber);
-        newHit.album = albumRepo.findById(albumId).get();
+        newHit.album =   albumRepo.findById(albumId).get();
         songRepo.save(newHit);
         return new RedirectView("/albums");
 
