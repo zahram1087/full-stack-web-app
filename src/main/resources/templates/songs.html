@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Songs</title>
+    <div th:replace="~{common :: head}"></div>
+</head>
+
+<body>
+<h1>Welcome</h1>
+<table>
+    <tr><h2>Songs</h2>
+        <td th:each="song : ${songs}">
+            <span th:text="${song}"></span>
+            <!--<span th:text="${song.title}"></span> that has an album named<span th:text="${song.trackNumber}"></span> track number is-->
+            <!--<span th:text="${song.length}"></span>. The duration of the song is <span th:text="${song.length}"></span>-->
+        </td>
+    </tr>
+</table>
+<h2>Add A Song!</h2>
+<form action="/songs" method="POST">
+    <label>Name</label><input name="title"/>
+    <label>length</label><input name="length"/>
+    <label>Track Number</label><input name="trackNumber"/>
+    <input type="submit"/>
+</form>
+
+</body>
+
+</html>
