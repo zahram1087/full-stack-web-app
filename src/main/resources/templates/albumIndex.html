@@ -15,6 +15,11 @@
         <span th:text="${al.artist}"></span> that has an album named<span th:text="${al.title}"></span> which contains
         <span th:text="${al.songCount}"></span> songs. The duration of the song is <span th:text="${al.length}"></span>
         seconds long and you can view the album cover  <a th:href="${al.imageUrl}"> here</a>
+        <ul>
+            <li th:each="song : ${al.song}">
+                <span th:text="${song}"></span>
+            </li>
+        </ul>
 
         <form method="POST" th:action="${'/albums/'+ al.id +'/songs'}">
             <label>Name</label><input name="title"/>
