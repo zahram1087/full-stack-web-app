@@ -21,7 +21,7 @@ I approached this lab reviewing how to do a controller.I also reviewed thymleaf 
 2. Remember to remove the spring.jpa.hibernate.ddl-auto = create from the application properties after the first run so that database doesn't get wiped clean
 3. Run ./gradlew bootRun
 4. Go to:
-    localhost8080/albums -to get started
+    http://localhost:8080/albums -to get started
 
 
 
